@@ -3,6 +3,7 @@ import Link from "next/link";
 import Date from "../components/date";
 import { getSortedPostsData } from '../lib/posts'
 import Layout, { siteTitle } from "../components/layout";
+import styles from "./index.module.css";
 
 export default function Home({ allPostsData }) {
     return (
@@ -24,7 +25,7 @@ export default function Home({ allPostsData }) {
 		  <h2 >Blog</h2>
           <ul >
             {allPostsData.map(({ id, date, title }) => (
-              <li  key={id}>
+              <li  className={styles.listItem} key={id}>
                 <Link href={`/posts/${id}`}>
                     <a>{title}</a>
                 </Link>

@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    font-size: 18px;
+    @apply leading-normal;
+  }
+  a {
+    @apply text-blue-600 no-underline hover:text-blue-500 hover:underline;
+  }
+  img {
+    @apply max-w-full block;
+  }
+
+  h1 {
+    @apply text-5xl leading-normal;
+  }
+  h2 {
+    @apply text-4xl leading-normal;
+  }
+  h3 {
+    @apply text-3xl leading-normal;
+  }
+  h4 {
+    @apply text-2xl leading-normal;
+  }
+  h5 {
+    @apply text-xl leading-normal;
+  }
+  h6 {
+    @apply text-lg leading-normal;
+  }
+}

@@ -2,8 +2,9 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "./layout.module.css";
 import Link from "next/link";
+import UserIcon from "./UserIcon";
 
-const name = "Eddy";
+const name ="Eddy";
 export const siteTitle = "Next.js sample website";
 export default function Layout({ children, home }) {
   return (
@@ -26,28 +27,12 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            <Image
-              priority
-              src="/images/profile.jpg"
-              height={144}
-              width={144}
-              alt={name}
-            />
+            <UserIcon w={144} h={144} name={name}/>
             <h1>{name}</h1>
           </>
         ) : (
           <>
-            <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/images/profile.jpg"
-                  height={108}
-                  width={108}
-                  alt={name}
-                />
-              </a>
-            </Link>
+            <UserIcon w={108} h={108} name={name}/>
             <h2>
               <Link href="/">
                 <a>{name}</a>
