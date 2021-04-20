@@ -1,12 +1,17 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "./layout.module.css";
 import Link from "next/link";
 import UserIcon from "./UserIcon";
 
-const name ="Eddy";
-export const siteTitle = "Next.js sample website";
-export default function Layout({ children, home }) {
+const name = "Eddy";
+export const siteTitle = "ededddy's den";
+export default function Layout({
+  children,
+  home,
+}: {
+  children: React.ReactNode;
+  home?: boolean;
+}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -27,12 +32,12 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            <UserIcon w={144} h={144} name={name}/>
+            <UserIcon w={144} h={144} name={name} />
             <h1>{name}</h1>
           </>
         ) : (
           <>
-            <UserIcon w={108} h={108} name={name}/>
+            <UserIcon w={108} h={108} name={name} />
             <h2>
               <Link href="/">
                 <a>{name}</a>

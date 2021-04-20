@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from 'next/link';
 import styles from './layout.module.css';
 
-const userIcon = ({name, w, h}) => {
+const userIcon = ({name, w, h} : {name: string, w: number, h: number }) => {
   return (<Link href="/">
     <a>
       <Image
