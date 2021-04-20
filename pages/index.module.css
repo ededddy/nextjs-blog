@@ -1,3 +1,7 @@
 .listItem {
   @apply mb-5;
 }
+
+.flexWrapper {
+  @apply flex items-start justify-between;
+}

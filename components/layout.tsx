@@ -5,13 +5,13 @@ import UserIcon from "./UserIcon";
 
 const name = "Eddy";
 export const siteTitle = "ededddy's den";
-export default function Layout({
+const Layout = ({
   children,
   home,
 }: {
   children: React.ReactNode;
   home?: boolean;
-}) {
+}) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -56,4 +56,5 @@ export default function Layout({
       )}
     </div>
   );
-}
+};
+export default Layout;

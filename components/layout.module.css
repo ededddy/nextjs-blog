@@ -1,5 +1,5 @@
 .container {
-  @apply max-w-xl py-0 px-4 my-12 mx-auto;
+  @apply flex flex-col items-center  py-0 px-4 my-12;
 }
 
 .header {
